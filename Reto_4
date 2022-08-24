@@ -1,0 +1,62 @@
+from datetime import date
+import matplotlib.pyplot as plt
+
+listaProductos = list()
+class User:
+    def __init__(self, id: int, username: str,balance,order_list: list):
+        self.id = id
+        self.username = username
+        self.balance = balance
+        self.order_list = order_list
+        product = []
+
+    def add_product_to_car(self, product):
+        listaProductos.append(product)
+
+    def consolidar_orden(self, lista):
+        return lista
+
+
+class Order:
+    def __init__(self,id: int, product_list: list, date: date, total: float, status: bool):
+        self.id = id
+        self.product_list = product_list
+        self.date = date
+        self.total = total
+        self.status = status
+
+
+class Product:
+    def __init__(self,id: int,name: str, price: float):
+        self.id = id
+        self.name = name
+        self.price = price
+        #self.price_history = price_history
+    
+    def update_price(self,new_price: float):
+        self.price = new_price
+
+    def add_product_to_car(self, prod = Product):
+        self.product_list = list[Product] = []
+        product1= input("Ingrese el producto que desea")
+        self.product_list.append(product1)
+
+    def add_to_balance(self, price):
+        pass
+
+
+
+jugo_piña = Product(123, "Jugo de piña", 2000) 
+paquete_papas = Product(213, "Papas", 3500)
+
+Pedro = User(8,"Pedro")
+
+jugo_piña = Product(123, "Jugo de piña", 2000)
+
+paquete_papas = Product(213, "Papas", 3500)
+
+Pedro.add_product_to_car(jugo_piña)
+Pedro.add_product_to_car(paquete_papas)
+
+print(Pedro.consolidar_orden(listaProductos))
+print(listaProductos[0])
